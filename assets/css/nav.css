@@ -1,0 +1,352 @@
+/* ============================================================
+   TRAVELJO CEYLON TOURS — Navigation
+   nav.css
+   ============================================================ */
+
+/* ── TOPBAR ──────────────────────────────────────────────── */
+.topbar {
+  background: var(--dark);
+  padding: 0.5rem 0;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  position: relative;
+  z-index: 1001;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.topbar a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.65);
+  transition: color var(--t-fast) var(--ease);
+}
+
+.topbar a:hover {
+  color: var(--gold);
+}
+
+.topbar-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.topbar-socials a {
+  font-size: 0.95rem;
+}
+
+.topbar-sep {
+  width: 1px;
+  height: 12px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ── SITE HEADER ─────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background var(--t-base) var(--ease),
+              padding var(--t-base) var(--ease),
+              box-shadow var(--t-base) var(--ease);
+  background: transparent;
+}
+
+.site-header.is-hero {
+  position: absolute;
+  background: transparent;
+}
+
+.site-header.scrolled,
+.site-header.solid {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+.site-nav {
+  padding: 1rem 0;
+  transition: padding var(--t-base) var(--ease);
+}
+
+.site-header.scrolled .site-nav {
+  padding: 0.6rem 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* ── LOGO ────────────────────────────────────────────────── */
+.nav-logo {
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  height: 54px;
+  width: auto;
+  transition: height var(--t-base) var(--ease);
+}
+
+.site-header.scrolled .nav-logo img {
+  height: 44px;
+}
+
+/* ── NAV LINKS ───────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links > li > a {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+  letter-spacing: 0.01em;
+}
+
+.site-header.scrolled .nav-links > li > a,
+.site-header.solid .nav-links > li > a {
+  color: var(--dark);
+}
+
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+  color: var(--gold);
+}
+
+.nav-links > li > a.active {
+  font-weight: 700;
+}
+
+/* Dropdown indicator */
+.nav-links > li.has-dropdown > a::after {
+  content: '▾';
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+/* ── DROPDOWN MENU ───────────────────────────────────────── */
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 220px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  border-top: 3px solid var(--gold);
+}
+
+.nav-links > li.has-dropdown:hover .nav-dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+
+.nav-dropdown a:hover {
+  background: var(--gold-pale);
+  color: var(--gold);
+}
+
+/* ── NAV CTA ─────────────────────────────────────────────── */
+.nav-cta {
+  flex-shrink: 0;
+}
+
+.nav-cta .btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.875rem;
+}
+
+/* ── HAMBURGER ───────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform var(--t-base) var(--ease), opacity var(--t-base) var(--ease);
+}
+
+.site-header.scrolled .hamburger span,
+.site-header.solid .hamburger span {
+  background: var(--dark);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── MOBILE MENU ─────────────────────────────────────────── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--white);
+  z-index: 999;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu-header img {
+  height: 44px;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--text);
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.mobile-nav {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.mobile-nav > li {
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav > li > a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark);
+  transition: color var(--t-fast) var(--ease);
+}
+
+.mobile-nav > li > a:hover,
+.mobile-nav > li > a.active {
+  color: var(--gold);
+}
+
+.mobile-menu-footer {
+  padding: 1.5rem;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobile-menu-footer .btn {
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.mobile-contact a {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .topbar .topbar-left {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar { display: none; }
+}
