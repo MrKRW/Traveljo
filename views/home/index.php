@@ -417,11 +417,11 @@ $isHeroPage = true;
 
     <?php
     $experiences = [
-      ['icon' => '🏝️', 'name' => 'Beaches & Coastline',      'desc' => 'From turtle-nesting coves to surf breaks and whale-watching straits — Sri Lanka's 1,340km coastline never repeats itself.'],
+      ['icon' => '🏝️', 'name' => 'Beaches & Coastline',      'desc' => 'From turtle-nesting coves to surf breaks and whale-watching straits — Sri Lanka\'s 1,340km coastline never repeats itself.'],
       ['icon' => '🏛️', 'name' => 'History & Culture',          'desc' => 'Walk among 2,500-year-old stupas, ancient royal palaces, and vibrant Buddhist monasteries still used today.'],
       ['icon' => '🐆', 'name' => 'Wildlife & Safaris',         'desc' => 'Spot leopards at Yala, elephants at Udawalawe, and blue whales off Mirissa — all within one extraordinary island.'],
-      ['icon' => '🧗', 'name' => 'Adventure & Outdoors',       'desc' => 'Hike Adam's Peak at dawn, surf Arugam Bay, white-water raft the Kelani River, or zip-line over the rainforest.'],
-      ['icon' => '🍛', 'name' => 'Gastronomy & Food',          'desc' => 'Explore a cuisine shaped by three millennia of trade — fresh coconut, bold spices, and street food that tells Sri Lanka's story.'],
+      ['icon' => '🧗', 'name' => 'Adventure & Outdoors',       'desc' => 'Hike Adam\'s Peak at dawn, surf Arugam Bay, white-water raft the Kelani River, or zip-line over the rainforest.'],
+      ['icon' => '🍛', 'name' => 'Gastronomy & Food',          'desc' => 'Explore a cuisine shaped by three millennia of trade — fresh coconut, bold spices, and street food that tells Sri Lanka\'s story.'],
       ['icon' => '🗺️', 'name' => 'Off The Beaten Path',       'desc' => 'Discover the quiet north, the wild east coast, and hidden jungle temples most tourists will never find.'],
     ];
     ?>

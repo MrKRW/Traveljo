@@ -202,11 +202,11 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <!-- Site JS -->
-<script src="<?= SITE_URL ?>/assets/js/main.js"></script>
-<script src="<?= SITE_URL ?>/assets/js/enquiry.js"></script>
+<script src="<?= SITE_URL ?>/assets/js/main.js?v=1.3"></script>
+<script src="<?= SITE_URL ?>/assets/js/enquiry.js?v=1.3"></script>
 
 <?php if (isset($extraJs)): foreach ($extraJs as $js): ?>
-<script src="<?= SITE_URL ?>/assets/js/<?= e($js) ?>"></script>
+<script src="<?= SITE_URL ?>/assets/js/<?= e($js) ?>?v=1.3"></script>
 <?php endforeach; endif; ?>
 
 <style>

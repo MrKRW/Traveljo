@@ -57,27 +57,40 @@
 
 /* ── SITE HEADER ─────────────────────────────────────────── */
 .site-header {
-  position: sticky;
+  display: block;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: background var(--t-base) var(--ease),
+  background: transparent;
+  transition: transform var(--t-base) var(--ease),
+              background var(--t-base) var(--ease),
               padding var(--t-base) var(--ease),
               box-shadow var(--t-base) var(--ease);
-  background: transparent;
 }
 
 .site-header.is-hero {
-  position: absolute;
   background: transparent;
 }
 
-.site-header.scrolled,
-.site-header.solid {
+.site-header.scrolled {
+  position: fixed;
   background: rgba(255,255,255,0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.site-header.solid {
+  position: relative;
+  background: var(--white);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.04);
 }
 
 /* ── NAV ─────────────────────────────────────────────────── */

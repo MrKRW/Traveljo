@@ -21,6 +21,7 @@ class HomeController extends Controller
         $this->render('home/index', [
             'pageTitle'    => SITE_NAME . ' — Discover the Pearl of the Indian Ocean',
             'metaDesc'     => 'Traveljo Ceylon Tours offers expertly crafted Sri Lanka tour packages — cultural heritage, wildlife safaris, beach escapes, and luxury travel experiences.',
+            'isHeroPage'   => true,
             'featured_tours'   => $tourModel->getFeatured(3),
             'destinations'     => $destModel->getFeatured(6),
             'blog_posts'       => $blogModel->getLatest(3),

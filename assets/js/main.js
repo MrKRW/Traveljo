@@ -15,12 +15,10 @@ const header = $('#site-header');
 function updateNav() {
   if (!header) return;
 
-  if (header.classList.contains('is-hero')) {
-    if (window.scrollY > 80) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+  if (window.scrollY > 80) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
   }
 }
 

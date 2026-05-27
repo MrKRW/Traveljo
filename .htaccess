@@ -24,12 +24,7 @@ RewriteRule ^views/       - [F,L]
 </FilesMatch>
 
 # ── Protect uploads — allow images only ──
-<Directory "uploads">
-    <FilesMatch "\.(php|pl|py|cgi|sh|phtml|phar)$">
-        Order Deny,Allow
-        Deny from all
-    </FilesMatch>
-</Directory>
+RewriteRule ^uploads/.*\.(php|pl|py|cgi|sh|phtml|phar)$ - [F,L,NC]
 
 # ── Security headers ──
 <IfModule mod_headers.c>
