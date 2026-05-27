@@ -30,4 +30,18 @@ class HomeController extends Controller
             'csrf_token'       => $this->csrfToken(),
         ]);
     }
+
+    public function about(array $params = []): void
+    {
+        $testimonialModel = new Testimonial();
+
+        $this->render('about/index', [
+            'pageTitle'    => 'About Us — ' . SITE_NAME,
+            'metaDesc'     => 'Learn about Traveljo Ceylon Tours — a family-owned Sri Lanka tour operator with 20+ years of expertise crafting personalised cultural, wildlife, and luxury travel experiences.',
+            'isHeroPage'   => false,
+            'extraCss'     => ['home.css', 'about.css'],
+            'testimonials' => $testimonialModel->getApproved(4),
+            'csrf_token'   => $this->csrfToken(),
+        ]);
+    }
 }

@@ -1,0 +1,299 @@
+/* ============================================================
+   TRAVELJO CEYLON TOURS — About Page Styles
+   about.css
+   ============================================================ */
+
+/* ── PAGE HERO (image variant) ───────────────────────────── */
+.page-hero--img {
+  background: url('../images/hero/sigiriya.jpg') center center / cover no-repeat;
+  padding: 5rem 0 4.5rem;
+  text-align: center;
+}
+
+.page-hero--img::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 46, 0.82) 0%,
+    rgba(22, 33, 62, 0.88) 100%
+  );
+  opacity: 1;
+}
+
+.page-hero--img .breadcrumb {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.page-hero--img .page-hero-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.breadcrumb--light {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.breadcrumb--light a {
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--t-fast) var(--ease);
+}
+
+.breadcrumb--light a:hover {
+  color: var(--gold-light);
+}
+
+.breadcrumb--light .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.breadcrumb--light .current {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+/* ── STATS BAR ───────────────────────────────────────────── */
+.about-stats {
+  background: var(--green);
+  padding: 3.5rem 0;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.about-stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.about-stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── MISSION & VISION ────────────────────────────────────── */
+.about-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-mission-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--border);
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
+}
+
+.about-mission-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-light);
+}
+
+.about-mission-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--gold-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-mission-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.about-mission-card p {
+  font-size: 0.975rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* ── VALUES GRID ─────────────────────────────────────────── */
+.about-values-grid {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── TIMELINE ────────────────────────────────────────────── */
+.timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--gold-light));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  background: var(--gold);
+  border: 3px solid var(--cream);
+  border-radius: 50%;
+  transform: translateX(-6px);
+  box-shadow: var(--shadow-gold);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── TESTIMONIALS GRID ───────────────────────────────────── */
+.about-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.about-testimonials-grid .testimonial-card {
+  height: 100%;
+}
+
+/* ── CTA SECTION ─────────────────────────────────────────── */
+.about-cta {
+  background: var(--dark);
+  padding: var(--sp-lg) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/hero/beach.jpg') center center / cover no-repeat;
+  opacity: 0.12;
+}
+
+.about-cta-inner {
+  position: relative;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.about-cta-inner p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .about-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero--img {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-cta-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}
