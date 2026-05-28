@@ -4,6 +4,10 @@
       <span class="section-label">Admin Panel</span>
       <h1 class="section-title">Manage Gallery Images</h1>
       <p class="section-sub">Upload images here and they will appear on the public gallery page.</p>
+      <div class="admin-shortcuts">
+        <a class="admin-shortcut <?= is_active('/admin/tours') ?>" href="<?= SITE_URL ?>/admin/tours">Tours</a>
+        <a class="admin-shortcut <?= is_active('/admin/gallery') ?>" href="<?= SITE_URL ?>/admin/gallery">Gallery</a>
+      </div>
     </div>
   </section>
 

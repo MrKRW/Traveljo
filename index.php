@@ -37,6 +37,7 @@ $router->get('/tour/:slug',                'TourController@single');
 $router->get('/experiences',               'ExperienceController@index');
 $router->get('/gallery',                   'GalleryController@index');
 $router->get('/admin/gallery',             'AdminGalleryController@index');
+$router->get('/admin/tours',               'AdminTourController@index');
 $router->get('/blog',                      'BlogController@index');
 $router->get('/blog/:slug',                'BlogController@single');
 $router->get('/offers',                    'OfferController@index');
@@ -49,6 +50,7 @@ $router->get('/faq',                       'FaqController@index');
 $router->post('/enquiry/submit',           'EnquiryController@submit');
 $router->post('/newsletter/subscribe',     'EnquiryController@newsletter');
 $router->post('/admin/gallery/store',      'AdminGalleryController@store');
+$router->post('/admin/tours/store',        'AdminTourController@store');
 
 // ── DISPATCH ───────────────────────────────────────────────
 $uri    = $_SERVER['REQUEST_URI'] ?? '/';

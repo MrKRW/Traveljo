@@ -45,6 +45,16 @@ class Tour
         return $stmt->fetchAll();
     }
 
+    public function getAllForAdmin(int $limit = 200): array
+    {
+        $stmt = $this->db->prepare(
+            "SELECT * FROM tours ORDER BY created_at DESC LIMIT :limit"
+        );
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public function getBySlug(string $slug): ?array
     {
         $stmt = $this->db->prepare(
@@ -88,5 +98,36 @@ class Tour
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    public function slugExists(string $slug): bool
+    {
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM tours WHERE slug = :slug");
+        $stmt->execute([':slug' => $slug]);
+        return (int) $stmt->fetchColumn() > 0;
+    }
+
+    public function create(array $data): bool
+    {
+        $stmt = $this->db->prepare(
+            "INSERT INTO tours
+            (title, slug, category, duration_days, price_usd, tagline, description, highlights, cover_image, featured, status)
+            VALUES
+            (:title, :slug, :category, :duration_days, :price_usd, :tagline, :description, :highlights, :cover_image, :featured, :status)"
+        );
+
+        return $stmt->execute([
+            ':title'         => $data['title'],
+            ':slug'          => $data['slug'],
+            ':category'      => $data['category'],
+            ':duration_days' => $data['duration_days'],
+            ':price_usd'     => $data['price_usd'],
+            ':tagline'       => $data['tagline'],
+            ':description'   => $data['description'],
+            ':highlights'    => $data['highlights'],
+            ':cover_image'   => $data['cover_image'],
+            ':featured'      => $data['featured'],
+            ':status'        => $data['status'],
+        ]);
     }
 }

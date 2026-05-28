@@ -1,8 +1,8 @@
-.admin-gallery-page {
+.admin-tours-page {
   background: #f5f7fb;
 }
 
-.admin-gallery-header {
+.admin-tours-header {
   padding: 7rem 0 2rem;
 }
 
@@ -59,10 +59,22 @@
   color: #2e3c5b;
 }
 
-.admin-form input {
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
   border: 1px solid #d8dfec;
   border-radius: 10px;
   padding: 0.7rem 0.9rem;
+}
+
+.admin-form textarea {
+  resize: vertical;
+}
+
+.admin-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
 }
 
 .admin-alert {
@@ -84,14 +96,14 @@
   border: 1px solid #f8c4c4;
 }
 
-.admin-gallery-list {
+.admin-tour-list {
   display: grid;
   gap: 0.8rem;
-  max-height: 640px;
+  max-height: 680px;
   overflow: auto;
 }
 
-.admin-image-item {
+.admin-tour-item {
   border: 1px solid #e8edf7;
   border-radius: 12px;
   padding: 0.55rem;
@@ -101,22 +113,26 @@
   align-items: center;
 }
 
-.admin-image-item img {
+.admin-tour-item img {
   width: 90px;
   height: 70px;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.admin-image-info h3 {
+.admin-tour-info h3 {
   font-size: 0.95rem;
   color: #1d2740;
 }
 
-.admin-image-info p {
-  font-size: 0.78rem;
+.admin-tour-info p {
+  font-size: 0.8rem;
   color: #65728e;
-  margin-top: 0.2rem;
+}
+
+.admin-tour-info small {
+  font-size: 0.75rem;
+  color: #8995ae;
 }
 
 .admin-empty {
