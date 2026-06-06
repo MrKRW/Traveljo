@@ -103,6 +103,7 @@
 </footer>
 
 <!-- ══ ENQUIRY MODAL ════════════════════════════════════════ -->
+<?php if (empty($isAdmin)): ?>
 <div class="enquiry-modal-overlay" id="enquiry-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="enquiry-modal">
     <div class="enquiry-modal-header">
@@ -193,6 +194,7 @@
     ✈
   </button>
 </div>
+<?php endif; ?>
 
 <!-- ══ TOAST ═════════════════════════════════════════════════ -->
 <div class="toast" id="toast" role="alert" aria-live="polite"></div>

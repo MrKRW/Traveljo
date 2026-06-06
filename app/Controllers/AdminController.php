@@ -14,6 +14,7 @@ class AdminController extends Controller
 
         $this->render('admin/index', [
             'pageTitle'  => 'Admin Panel — ' . SITE_NAME,
+            'isAdmin'    => true,
             'metaDesc'   => 'Manage tours and gallery for Traveljo Ceylon Tours.',
             'isHeroPage' => false,
             // Include both CSS files to retain their specific styling, or a combined one if we had it.
