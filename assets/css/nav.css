@@ -363,3 +363,210 @@
 @media (max-width: 640px) {
   .topbar { display: none; }
 }
+
+/* ════════════════════════════════════════════════════════
+   SPLIT NAV — Homepage only (logo centred, links each side)
+   ════════════════════════════════════════════════════════ */
+
+/* ── Base: fixed + fully transparent at page top ──────────── */
+.site-header.has-split-nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: background 0.4s ease,
+              box-shadow  0.4s ease;
+}
+
+/* Remove default site-nav padding so the grid controls height */
+.site-header.has-split-nav .site-nav {
+  padding: 0;
+}
+
+/* Three-column layout: left links | logo | right links */
+.nav-inner--split {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  min-height: 90px;
+  position: relative;
+  transition: min-height var(--t-base) var(--ease);
+}
+
+/* Thin gold divider line — hidden when transparent, shown when scrolled */
+.nav-inner--split::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -9999px;
+  right: -9999px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(185,145,65, 0.45) 25%,
+    rgba(185,145,65, 0.70) 50%,
+    rgba(185,145,65, 0.45) 75%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity var(--t-base) var(--ease);
+  pointer-events: none;
+}
+
+.site-header.scrolled.has-split-nav .nav-inner--split::after {
+  opacity: 1;
+}
+
+/* Left links — right-aligned toward the logo */
+.nav-links--left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+}
+
+/* Right links — left-aligned toward the logo */
+.nav-links--right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.15rem;
+}
+
+/* CTA button spacing */
+.nav-cta-item {
+  margin-left: 0.5rem;
+}
+
+/* Centre logo */
+.nav-logo--center {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-logo--center img {
+  height: 90px;
+  width: auto;
+  transition: height 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+  /* Blend white PNG background away so logo floats over hero */
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.45));
+}
+
+/* When scrolled (white bg behind), remove multiply so logo shows in full colour */
+.site-header.scrolled.has-split-nav .nav-logo--center img {
+  mix-blend-mode: normal;
+}
+
+/* ── Link colours: white on hero, dark when scrolled ───────── */
+.site-header.has-split-nav .nav-links--left > li > a,
+.site-header.has-split-nav .nav-links--right > li > a {
+  color: var(--white);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.45);
+  transition: color var(--t-fast) var(--ease),
+              text-shadow var(--t-fast) var(--ease);
+}
+
+.site-header.has-split-nav .nav-links--left > li > a:hover,
+.site-header.has-split-nav .nav-links--right > li > a:hover,
+.site-header.has-split-nav .nav-links--left > li > a.active,
+.site-header.has-split-nav .nav-links--right > li > a.active {
+  color: var(--gold);
+}
+
+/* Hamburger bars stay white over hero */
+.site-header.has-split-nav .hamburger span {
+  background: var(--white);
+}
+
+/* ── SCROLLED STATE: frosted glass slides in ───────────── */
+.site-header.scrolled.has-split-nav {
+  background: rgba(255,255,255,0.97) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 28px rgba(0,0,0,0.10) !important;
+  animation: slideDown 0.35s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.site-header.scrolled.has-split-nav .nav-inner--split {
+  min-height: 64px;
+}
+
+/* Logo shrinks when sticky */
+.site-header.scrolled.has-split-nav .nav-logo--center img {
+  height: 56px;
+  filter: none;
+}
+
+/* Links go dark on white background */
+.site-header.scrolled.has-split-nav .nav-links--left > li > a,
+.site-header.scrolled.has-split-nav .nav-links--right > li > a {
+  color: var(--dark);
+  text-shadow: none;
+}
+
+.site-header.scrolled.has-split-nav .nav-links--left > li > a:hover,
+.site-header.scrolled.has-split-nav .nav-links--right > li > a:hover,
+.site-header.scrolled.has-split-nav .nav-links--left > li > a.active,
+.site-header.scrolled.has-split-nav .nav-links--right > li > a.active {
+  color: var(--gold);
+}
+
+/* Hamburger bars go dark on white */
+.site-header.scrolled.has-split-nav .hamburger span {
+  background: var(--dark);
+}
+
+/* Hamburger inside split nav — hidden on desktop */
+.nav-inner--split > .hamburger {
+  display: none;
+  grid-column: 3;
+  justify-self: end;
+}
+
+/* ── SPLIT NAV RESPONSIVE ─────────────────────────────── */
+@media (max-width: 1024px) {
+  .nav-inner--split {
+    grid-template-columns: auto 1fr;
+    min-height: 70px;
+  }
+
+  /* Hide link groups on mobile */
+  .nav-links--left,
+  .nav-links--right {
+    display: none;
+  }
+
+  /* Show hamburger, push it to the right */
+  .nav-inner--split > .hamburger {
+    display: flex;
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  /* Logo on the left of the hamburger on mobile */
+  .nav-logo--center {
+    grid-column: 1;
+    justify-content: flex-start;
+  }
+
+  .nav-logo--center img {
+    height: 60px;
+  }
+
+  .site-header.scrolled.has-split-nav .nav-logo--center img {
+    height: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-logo--center img {
+    height: 52px;
+  }
+}
+

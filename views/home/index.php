@@ -7,8 +7,9 @@
 // Extra CSS for home-specific styles
 $extraCss = ['home.css'];
 
-// Mark this as a hero page (transparent nav)
+// Mark this as a hero page (transparent nav) + homepage (split centre-logo nav)
 $isHeroPage = true;
+$isHomePage  = true;
 ?>
 
 <!-- ════════════════════════════════════════════════════════
@@ -26,7 +27,6 @@ $isHeroPage = true;
              class="hero-slide-bg" loading="eager">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
-          <span class="hero-eyebrow">Welcome to Sri Lanka</span>
           <h1 class="hero-title">
             Discover the<br>
             <em>Pearl of the</em><br>
@@ -54,7 +54,6 @@ $isHeroPage = true;
              class="hero-slide-bg" loading="lazy">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
-          <span class="hero-eyebrow">Southern Coast</span>
           <h1 class="hero-title">
             Endless Beaches,<br>
             <em>Timeless</em><br>
@@ -82,7 +81,6 @@ $isHeroPage = true;
              class="hero-slide-bg" loading="lazy">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
-          <span class="hero-eyebrow">Wildlife Safari</span>
           <h1 class="hero-title">
             Track Leopards,<br>
             <em>Witness</em> the<br>
@@ -110,7 +108,6 @@ $isHeroPage = true;
              class="hero-slide-bg" loading="lazy">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
-          <span class="hero-eyebrow">Hill Country</span>
           <h1 class="hero-title">
             Ride the World's<br>
             <em>Most Scenic</em><br>

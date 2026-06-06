@@ -6,8 +6,16 @@
 /* ── HERO ────────────────────────────────────────────────── */
 .hero {
   position: relative;
+  /* Fullscreen: fill the entire viewport edge to edge */
+  width: 100vw;
   height: 100vh;
-  min-height: 640px;
+  height: 100dvh;          /* dynamic viewport height (mobile safe) */
+  min-height: 600px;
+  /* Pull to page edges, overriding any container constraints */
+  margin-left:  calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  /* Override the global section { padding: var(--sp-lg) 0 } rule */
+  padding: 0 !important;
   overflow: hidden;
   color: var(--white);
 }

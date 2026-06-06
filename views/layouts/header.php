@@ -34,18 +34,77 @@
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/style.css?v=1.3">
-  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/nav.css?v=1.3">
+  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/nav.css?v=1.5">
   <?php if (isset($extraCss)): foreach ($extraCss as $css): ?>
-  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/<?= e($css) ?>?v=1.3">
+  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/<?= e($css) ?>?v=1.4">
   <?php endforeach; endif; ?>
 </head>
 <body>
 
 
 <!-- ══ SITE HEADER ══════════════════════════════════════════ -->
-<header class="site-header <?= ($isHeroPage ?? false) ? 'is-hero' : 'solid' ?>" id="site-header" role="navigation">
+<header class="site-header <?= ($isHeroPage ?? false) ? 'is-hero' : 'solid' ?> <?= ($isHomePage ?? false) ? 'has-split-nav' : '' ?>" id="site-header" role="navigation">
   <nav class="site-nav">
     <div class="container">
+
+<?php if ($isHomePage ?? false): ?>
+      <!-- ── HOMEPAGE: Split nav — links | LOGO | links ── -->
+      <div class="nav-inner nav-inner--split">
+
+        <!-- Left links -->
+        <ul class="nav-links nav-links--left" role="list">
+          <li>
+            <a href="<?= SITE_URL ?>/" class="<?= is_active('/') ?>">Home</a>
+          </li>
+          <li>
+            <a href="<?= SITE_URL ?>/about" class="<?= is_active('/about') ?>">About Us</a>
+          </li>
+          <li class="has-dropdown">
+            <a href="<?= SITE_URL ?>/tours" class="<?= is_active('/tours') ?>">Tours</a>
+            <ul class="nav-dropdown">
+              <li><a href="<?= SITE_URL ?>/tours?category=authentic">Authentic Ceylon</a></li>
+              <li><a href="<?= SITE_URL ?>/tours?category=adventure">Adventure</a></li>
+              <li><a href="<?= SITE_URL ?>/tours?category=luxury">Luxury</a></li>
+              <li><a href="<?= SITE_URL ?>/tours?category=wildlife">Wildlife</a></li>
+              <li><a href="<?= SITE_URL ?>/tours?category=romantic">Romantic</a></li>
+              <li><a href="<?= SITE_URL ?>/tours?category=wellness">Wellness</a></li>
+              <li><a href="<?= SITE_URL ?>/tours">All Tours &rarr;</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Centre Logo -->
+        <a href="<?= SITE_URL ?>/" class="nav-logo nav-logo--center" aria-label="<?= e(SITE_NAME) ?> Home">
+          <img src="<?= SITE_URL ?>/assets/images/logo.png"
+               alt="<?= e(SITE_NAME) ?> Logo"
+               width="140" height="140">
+        </a>
+
+        <!-- Right links -->
+        <ul class="nav-links nav-links--right" role="list">
+          <li>
+            <a href="<?= SITE_URL ?>/gallery" class="<?= is_active('/gallery') ?>">Gallery</a>
+          </li>
+          <li>
+            <a href="<?= SITE_URL ?>/contact" class="<?= is_active('/contact') ?>">Contact Us</a>
+          </li>
+          <li class="nav-cta-item">
+            <button class="btn btn-primary btn-sm" id="enquiry-fab-btn" onclick="openEnquiryModal()">
+              Plan My Trip
+            </button>
+          </li>
+        </ul>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+<?php else: ?>
+      <!-- ── OTHER PAGES: Standard nav ── -->
       <div class="nav-inner">
 
         <!-- Logo -->
@@ -99,6 +158,8 @@
         </div>
 
       </div>
+<?php endif; ?>
+
     </div>
   </nav>
 </header>
