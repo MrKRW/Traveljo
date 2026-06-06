@@ -228,41 +228,6 @@ $isHomePage  = true;
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════
- SECTION 3: TOUR CATEGORIES
-════════════════════════════════════════════════════════ -->
-<section class="categories-section" aria-label="Tour Categories">
-  <div class="container">
-    <div class="section-header section-header--center" data-aos="fade-up">
-      <span class="section-label">What Are You Looking For?</span>
-      <h2 class="section-title">Choose Your Journey Style</h2>
-    </div>
-
-    <div class="categories-grid">
-      <?php
-      $categories = [
-        ['slug' => 'authentic',  'icon' => '🏯', 'name' => 'Authentic Ceylon',   'count' => 8],
-        ['slug' => 'adventure',  'icon' => '🧗', 'name' => 'Adventure',          'count' => 6],
-        ['slug' => 'luxury',     'icon' => '💎', 'name' => 'Luxury Escapes',     'count' => 4],
-        ['slug' => 'wildlife',   'icon' => '🐘', 'name' => 'Wildlife Safaris',   'count' => 7],
-        ['slug' => 'romantic',   'icon' => '💑', 'name' => 'Romantic Getaways',  'count' => 5],
-        ['slug' => 'group',      'icon' => '👥', 'name' => 'Group Tours',        'count' => 3],
-        ['slug' => 'wellness',   'icon' => '🧘', 'name' => 'Wellness Retreats',  'count' => 4],
-      ];
-      ?>
-      <?php foreach ($categories as $i => $cat): ?>
-      <a href="<?= SITE_URL ?>/tours?category=<?= e($cat['slug']) ?>"
-         class="category-card"
-         data-aos="fade-up"
-         data-aos-delay="<?= $i * 60 ?>">
-        <div class="category-icon"><?= $cat['icon'] ?></div>
-        <div class="category-name"><?= e($cat['name']) ?></div>
-        <div class="category-count"><?= $cat['count'] ?> tours</div>
-      </a>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
 
 
 <!-- ════════════════════════════════════════════════════════

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnText   = document.getElementById('enq-btn-text');
   const spinner   = document.getElementById('enq-spinner');
 
-  if (!form) return;
+  if (form) {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setLoading(false);
     }
   });
+  } // End if (form)
 
   function setLoading(loading) {
     submitBtn.disabled = loading;
