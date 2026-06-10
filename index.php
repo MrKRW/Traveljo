@@ -43,11 +43,14 @@ $router->get('/offers',                    'OfferController@index');
 $router->get('/offer/:slug',               'OfferController@single');
 $router->get('/plan-your-trip',            'PlanTripController@index');
 $router->get('/contact',                   'ContactController@index');
+$router->get('/services',                  'ServiceController@index');
+$router->get('/fleet',                     'ServiceController@fleet');
 $router->get('/faq',                       'FaqController@index');
 
 // ── POST ROUTES ────────────────────────────────────────────
 $router->post('/enquiry/submit',           'EnquiryController@submit');
 $router->post('/newsletter/subscribe',     'EnquiryController@newsletter');
+$router->post('/services/book',            'ServiceController@book');
 $router->post('/admin/store-gallery',      'AdminController@storeGallery');
 $router->post('/admin/store-tour',         'AdminController@storeTour');
 

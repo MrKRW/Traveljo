@@ -5,7 +5,7 @@
  */
 
 // Extra CSS for home-specific styles
-$extraCss = ['home.css'];
+$extraCss = ['home.css', 'packages.css', 'map_categories.css'];
 
 // Mark this as a hero page (transparent nav) + homepage (split centre-logo nav)
 $isHeroPage = true;
@@ -20,51 +20,51 @@ $isHomePage  = true;
   <div class="swiper">
     <div class="swiper-wrapper">
 
-      <!-- Slide 1 — Sigiriya -->
+      <!-- Slide 1 — Fleet -->
       <div class="swiper-slide hero-slide">
-        <img src="<?= SITE_URL ?>/assets/images/hero/sigiriya.jpg"
-             alt="Sigiriya Rock Fortress, Sri Lanka"
+        <img src="<?= SITE_URL ?>/assets/images/nissan-vanette.jpg"
+             alt="Luxury tourist van in Sri Lanka"
              class="hero-slide-bg" loading="eager">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Discover the<br>
-            <em>Pearl of the</em><br>
-            Indian Ocean
+            Your Private Ride<br>
+            <em>Across</em><br>
+            Paradise
           </h1>
           <p class="hero-subtitle">
-            Tailored journeys through ancient kingdoms, emerald highlands &amp; golden shores
+            Comfortable, safe, and premium chauffeur services across Sri Lanka.
           </p>
           <div class="hero-actions">
-            <a href="<?= SITE_URL ?>/tours" class="btn btn-primary btn-lg">
-              Explore Tours
+            <a href="<?= SITE_URL ?>/services" class="btn btn-primary btn-lg">
+              Explore Services
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="<?= SITE_URL ?>/destinations" class="btn btn-outline-white btn-lg">
-              Our Destinations
+            <a href="<?= SITE_URL ?>/fleet" class="btn btn-outline-white btn-lg">
+              Our Fleet
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 — Beach -->
+      <!-- Slide 2 — Airport -->
       <div class="swiper-slide hero-slide">
-        <img src="<?= SITE_URL ?>/assets/images/hero/beach.jpg"
-             alt="Pristine beach in Sri Lanka"
+        <img src="<?= SITE_URL ?>/assets/images/luxury-car.jpg"
+             alt="Comfortable airport transfers"
              class="hero-slide-bg" loading="lazy">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Endless Beaches,<br>
-            <em>Timeless</em><br>
-            Memories
+            Airport<br>
+            <em>Transfers,</em><br>
+            Simplified
           </h1>
           <p class="hero-subtitle">
-            From Galle's Dutch fort to Mirissa's whale-watching paradise
+            Arrive in style. Smooth, reliable, and prompt rides from Colombo airport.
           </p>
           <div class="hero-actions">
-            <a href="<?= SITE_URL ?>/tour/southern-coast-beach-bliss" class="btn btn-primary btn-lg">
-              Explore This Tour
+            <a href="<?= SITE_URL ?>/services?type=airport" class="btn btn-primary btn-lg">
+              Book a Transfer
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <button class="btn btn-outline-white btn-lg" onclick="openEnquiryModal()">
@@ -74,51 +74,51 @@ $isHomePage  = true;
         </div>
       </div>
 
-      <!-- Slide 3 — Wildlife -->
+      <!-- Slide 3 — Drivers -->
       <div class="swiper-slide hero-slide">
         <img src="<?= SITE_URL ?>/assets/images/hero/elephant.jpg"
-             alt="Wild elephants in Yala National Park, Sri Lanka"
+             alt="Sri Lanka scenery"
              class="hero-slide-bg" loading="lazy">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Track Leopards,<br>
-            <em>Witness</em> the<br>
-            Wild
+            Professional<br>
+            <em>Chauffeurs,</em><br>
+            Local Experts
           </h1>
           <p class="hero-subtitle">
-            The world's highest leopard density awaits in Yala National Park
+            Sit back and relax while our experienced, fluent English-speaking drivers show you the island.
           </p>
           <div class="hero-actions">
-            <a href="<?= SITE_URL ?>/tour/wild-ceylon-safari" class="btn btn-primary btn-lg">
-              Safari Tours
+            <a href="<?= SITE_URL ?>/services?type=multiday" class="btn btn-primary btn-lg">
+              Multi-Day Drivers
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <button class="btn btn-outline-white btn-lg" onclick="openEnquiryModal()">
-              Plan My Trip
+              Enquire Now
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Slide 4 — Tea Train -->
+      <!-- Slide 4 — Comfort -->
       <div class="swiper-slide hero-slide">
         <img src="<?= SITE_URL ?>/assets/images/hero/tea-train.jpg"
-             alt="Scenic train through Sri Lanka tea country"
+             alt="Scenic road trip in Sri Lanka"
              class="hero-slide-bg" loading="lazy">
         <div class="hero-slide-overlay"></div>
         <div class="hero-content">
           <h1 class="hero-title">
-            Ride the World's<br>
-            <em>Most Scenic</em><br>
-            Railway
+            Unmatched<br>
+            <em>Comfort &amp;</em><br>
+            Safety
           </h1>
           <p class="hero-subtitle">
-            Through emerald tea estates from Kandy to Ella on the famous blue train
+            Our fleet of modern, fully air-conditioned vehicles are ready for your journey.
           </p>
           <div class="hero-actions">
-            <a href="<?= SITE_URL ?>/tour/hill-country-train-journey" class="btn btn-primary btn-lg">
-              Explore This Tour
+            <a href="<?= SITE_URL ?>/fleet" class="btn btn-primary btn-lg">
+              View Our Fleet
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <button class="btn btn-outline-white btn-lg" onclick="openEnquiryModal()">
@@ -150,70 +150,37 @@ $isHomePage  = true;
   <div class="container">
     <div class="about-inner">
 
-      <!-- Image column -->
-      <div class="about-img-wrap" data-aos="fade-right">
-        <img src="<?= SITE_URL ?>/assets/images/hero/sigiriya.jpg"
-             alt="Sigiriya Rock Fortress"
-             class="about-img-main"
-             loading="lazy">
-        <img src="<?= SITE_URL ?>/assets/images/hero/beach.jpg"
-             alt="Sri Lanka beach"
-             class="about-img-accent"
-             loading="lazy">
-        <div class="about-badge">
-          <span class="about-badge-num">20+</span>
-          <span class="about-badge-text">Years of<br>Expertise</span>
-        </div>
-      </div>
-
       <!-- Text column -->
-      <div class="about-text" data-aos="fade-left" data-aos-delay="100">
+      <div class="about-text" data-aos="fade-right">
         <span class="section-label">About Traveljo</span>
         <h2 class="section-title">
-          We Know Sri Lanka<br>Like No One Else
+          We Are Your Premium<br>Vehicle Service
         </h2>
         <div class="divider"></div>
         <p class="about-desc">
-          Founded with a passion for sharing the extraordinary beauty of our island home,
-          Traveljo Ceylon Tours has been crafting personalised Sri Lanka experiences for over
-          two decades. From UNESCO World Heritage temples to pristine wilderness, we reveal
-          a Sri Lanka that goes far beyond the guidebook.
+          Founded with a passion for providing the most comfortable way to see our island home,
+          Traveljo Vehicle Tours has been offering top-tier private driver services for over
+          two decades. From smooth airport transfers to multi-day cross-country journeys, we ensure
+          your ride is safe, relaxing, and tailored to you.
         </p>
         <p class="about-desc" style="margin-top:-0.75rem">
-          Every journey is personally designed around you — your pace, your interests, your
-          budget. Our fleet of private vehicles, hand-picked guides, and trusted hotel
-          partners mean we deliver an experience that's seamlessly, unforgettably yours.
+          Every journey is personally designed around you — your pace, your route, your
+          comfort. Our fleet of modern, air-conditioned vehicles and our hand-picked, fluent English-speaking chauffeurs mean we deliver an experience that's seamlessly yours.
         </p>
 
-        <!-- Trust Badges -->
-        <div class="trust-badges">
-          <div class="trust-badge">
-            <div class="trust-badge-icon">🏛️</div>
-            <div class="trust-badge-info">
-              <h4>Heritage Expertise</h4>
-              <p>Deep knowledge of Sri Lanka's UNESCO sites and living culture</p>
-            </div>
+        <!-- Stats row -->
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num">15+</span>
+            <span class="about-stat-label">Luxury Vehicles</span>
           </div>
-          <div class="trust-badge">
-            <div class="trust-badge-icon">🚐</div>
-            <div class="trust-badge-info">
-              <h4>Own Vehicle Fleet</h4>
-              <p>Private air-conditioned vehicles and professional drivers</p>
-            </div>
+          <div class="about-stat">
+            <span class="about-stat-num">100%</span>
+            <span class="about-stat-label">Safe Drives</span>
           </div>
-          <div class="trust-badge">
-            <div class="trust-badge-icon">🌿</div>
-            <div class="trust-badge-info">
-              <h4>Sustainable Travel</h4>
-              <p>Committed to eco-responsible tourism and local communities</p>
-            </div>
-          </div>
-          <div class="trust-badge">
-            <div class="trust-badge-icon">⭐</div>
-            <div class="trust-badge-info">
-              <h4>5-Star Rated</h4>
-              <p>Consistently rated 5 stars by hundreds of happy travellers</p>
-            </div>
+          <div class="about-stat">
+            <span class="about-stat-num">5★</span>
+            <span class="about-stat-label">Chauffeurs</span>
           </div>
         </div>
 
@@ -223,96 +190,103 @@ $isHomePage  = true;
         </a>
       </div>
 
+      <!-- Portrait Image column -->
+      <div class="about-portrait-wrap" data-aos="fade-left" data-aos-delay="100">
+        <img src="<?= SITE_URL ?>/assets/images/happy-tourists.jpg"
+             alt="Happy tourists enjoying Sri Lanka"
+             class="about-portrait-img"
+             loading="lazy">
+        <div class="about-portrait-badge">
+          <span class="about-badge-num">20+</span>
+          <span class="about-badge-text">Years of<br>Expertise</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- ════════════════════════════════════════════════════════
+ AMAZING BANNER
+════════════════════════════════════════════════════════ -->
+<div class="amazing-banner" aria-hidden="true">
+  <img src="<?= SITE_URL ?>/assets/images/hero/amazing-banner.jpg" alt="Sri Lanka Landscape" class="amazing-banner-bg" loading="lazy">
+  <div class="amazing-banner-overlay"></div>
+  <div class="amazing-banner-content">
+    <span class="amazing-label">Sri Lanka</span>
+    <h2 class="amazing-word">Amazing</h2>
+    <p class="amazing-sub">The most comfortable way to see the island</p>
+    <a href="<?= SITE_URL ?>/fleet" class="btn btn-outline-white btn-lg">View Our Fleet</a>
+  </div>
+</div>
 
 
 
 <!-- ════════════════════════════════════════════════════════
- SECTION 4: FEATURED TOURS (from DB)
+ SECTION 4: FEATURED TOURS (from DB) — Photo Strip
 ════════════════════════════════════════════════════════ -->
-<section class="featured-tours-section" aria-label="Featured Tour Packages">
+<section class="featured-tours-section" aria-label="Popular Chauffeur Routes">
   <div class="container">
     <div class="section-header section-header--flex">
       <div data-aos="fade-right">
-        <span class="section-label">Handpicked For You</span>
-        <h2 class="section-title">Featured Tour Packages</h2>
+        <span class="section-label">Most Requested</span>
+        <h2 class="section-title">Popular Chauffeur Routes</h2>
       </div>
-      <a href="<?= SITE_URL ?>/tours" class="btn btn-outline" data-aos="fade-left">
-        View All Tours
+      <a href="<?= SITE_URL ?>/routes" class="btn btn-outline" data-aos="fade-left">
+        View All Routes
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
+  </div>
 
-    <div class="grid-3">
-      <?php if (!empty($featured_tours)): ?>
-        <?php foreach ($featured_tours as $i => $tour): ?>
-        <article class="card tour-card"
-                 data-aos="fade-up"
-                 data-aos-delay="<?= $i * 80 ?>">
-
-          <div class="card-img-wrap">
-            <img src="<?= SITE_URL ?>/<?= e($tour['cover_image'] ?? 'assets/images/hero/sigiriya.jpg') ?>"
-                 alt="<?= e($tour['title']) ?>"
-                 class="card-img"
-                 loading="lazy">
-            <span class="card-badge"><?= e(ucfirst($tour['category'])) ?></span>
-          </div>
-
-          <div class="card-body">
-            <div class="card-tag"><?= e($tour['category']) ?></div>
-            <h3 class="card-title"><?= e($tour['title']) ?></h3>
-
-            <div class="card-meta">
-              <span class="card-meta-item">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <?= e($tour['duration_days']) ?> Days
-              </span>
-              <span class="card-meta-sep">·</span>
-              <span class="card-meta-item">
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                Private Tour
-              </span>
-            </div>
-
-            <p class="card-excerpt"><?= e(excerpt($tour['tagline'] ?? $tour['description'] ?? '', 20)) ?></p>
-
-            <div class="card-footer">
-              <div>
-                <span class="card-price-label">From</span>
-                <span class="card-price"><?= $tour['price_usd'] ? formatPrice((float)$tour['price_usd']) : 'Contact Us' ?></span>
-              </div>
-              <a href="<?= SITE_URL ?>/tour/<?= e($tour['slug']) ?>"
-                 class="btn btn-primary btn-sm">
-                View Tour
-              </a>
-            </div>
-          </div>
-        </article>
-        <?php endforeach; ?>
-
-      <?php else: ?>
-        <!-- Skeleton placeholders when DB is empty -->
-        <?php for ($i = 0; $i < 3; $i++): ?>
-        <div class="card" style="min-height:420px;background:var(--cream)"></div>
-        <?php endfor; ?>
-      <?php endif; ?>
-    </div><!-- /grid-3 -->
+  <!-- Full-width photo strip -->
+  <div class="photo-strip" data-aos="fade-up">
+    <?php if (!empty($featured_tours)): ?>
+      <?php foreach (array_slice($featured_tours, 0, 4) as $i => $tour): ?>
+      <a href="<?= SITE_URL ?>/tour/<?= e($tour['slug']) ?>" class="photo-strip-item">
+        <img src="<?= SITE_URL ?>/<?= e($tour['cover_image'] ?? 'assets/images/hero/sigiriya.jpg') ?>"
+             alt="<?= e($tour['title']) ?>" loading="lazy">
+        <div class="photo-strip-overlay"></div>
+        <div class="photo-strip-info">
+          <span class="photo-strip-tag"><?= e(ucfirst($tour['category'])) ?></span>
+          <h3 class="photo-strip-title"><?= e($tour['title']) ?></h3>
+          <span class="photo-strip-days"><?= e($tour['duration_days']) ?> Days</span>
+        </div>
+      </a>
+      <?php endforeach; ?>
+    <?php else: ?>
+      <?php
+      $placeholderTours = [
+        ['img'=>'sigiriya.jpg','cat'=>'Cultural Drive','title'=>'Colombo to Kandy Route','days'=>1],
+        ['img'=>'beach.jpg','cat'=>'Coastal Ride','title'=>'Southern Coast Transfer','days'=>1],
+        ['img'=>'elephant.jpg','cat'=>'Wildlife Route','title'=>'Yala Safari Drive','days'=>2],
+        ['img'=>'tea-train.jpg','cat'=>'Scenic Drive','title'=>'Hill Country Journey','days'=>3],
+      ];
+      foreach ($placeholderTours as $pt): ?>
+      <a href="<?= SITE_URL ?>/services" class="photo-strip-item">
+        <img src="<?= SITE_URL ?>/assets/images/hero/<?= $pt['img'] ?>" alt="<?= $pt['title'] ?>" loading="lazy">
+        <div class="photo-strip-overlay"></div>
+        <div class="photo-strip-info">
+          <span class="photo-strip-tag"><?= $pt['cat'] ?></span>
+          <h3 class="photo-strip-title"><?= $pt['title'] ?></h3>
+          <span class="photo-strip-days"><?= $pt['days'] ?> Day(s)</span>
+        </div>
+      </a>
+      <?php endforeach; ?>
+    <?php endif; ?>
   </div>
 </section>
 
 
 <!-- ════════════════════════════════════════════════════════
- SECTION 5: DESTINATIONS GRID (from DB)
+ SECTION 5: DESTINATIONS MOSAIC (from DB)
 ════════════════════════════════════════════════════════ -->
-<section class="destinations-section" aria-label="Sri Lanka Destinations">
+<section class="destinations-section" aria-label="Sri Lanka Routes">
   <div class="container">
     <div class="section-header section-header--flex">
       <div data-aos="fade-right">
-        <span class="section-label">Our Island</span>
-        <h2 class="section-title">Discover Sri Lanka's<br>Iconic Destinations</h2>
+        <span class="section-label">Where We Drive</span>
+        <h2 class="section-title">Top Routes We<br>Cover Daily</h2>
       </div>
       <a href="<?= SITE_URL ?>/destinations" class="btn btn-outline" data-aos="fade-left">
         All Destinations
@@ -320,93 +294,125 @@ $isHomePage  = true;
       </a>
     </div>
 
-    <div class="destinations-grid" data-aos="fade-up">
-      <?php if (!empty($destinations)): ?>
-        <?php foreach ($destinations as $i => $dest): ?>
-        <a href="<?= SITE_URL ?>/destination/<?= e($dest['slug']) ?>"
-           class="dest-tile"
-           aria-label="Explore <?= e($dest['name']) ?>">
-          <img src="<?= SITE_URL ?>/<?= e($dest['cover_image'] ?? 'assets/images/hero/sigiriya.jpg') ?>"
-               alt="<?= e($dest['name']) ?>, Sri Lanka"
-               loading="lazy">
-          <div class="dest-tile-overlay">
-            <div class="dest-tile-info">
-              <div class="dest-tile-region"><?= e($dest['region']) ?></div>
-              <div class="dest-tile-name"><?= e($dest['name']) ?></div>
-              <span class="dest-tile-cta">Explore →</span>
-            </div>
-          </div>
-        </a>
-        <?php endforeach; ?>
-
-      <?php else: ?>
-        <?php
-        $placeholders = ['Sigiriya','Galle','Kandy','Ella','Mirissa','Yala'];
-        foreach ($placeholders as $name):
-        ?>
-        <div class="dest-tile" style="background:var(--cream-dark)">
-          <div class="dest-tile-overlay">
-            <div class="dest-tile-info">
-              <div class="dest-tile-name"><?= e($name) ?></div>
-            </div>
+    <?php
+    $destList = !empty($destinations) ? $destinations : [
+      ['name'=>'Sigiriya', 'region'=>'Cultural Triangle', 'slug'=>'sigiriya', 'cover_image'=>'assets/images/hero/sigiriya.jpg'],
+      ['name'=>'Mirissa Beach', 'region'=>'Southern Coast', 'slug'=>'mirissa', 'cover_image'=>'assets/images/hero/beach.jpg'],
+      ['name'=>'Kandy', 'region'=>'Hill Country', 'slug'=>'kandy', 'cover_image'=>'assets/images/hero/tea-train.jpg'],
+      ['name'=>'Yala Safari', 'region'=>'Wildlife', 'slug'=>'yala', 'cover_image'=>'assets/images/hero/elephant.jpg'],
+    ];
+    ?>
+    <div class="mosaic-grid" data-aos="fade-up">
+      <?php foreach (array_slice($destList, 0, 4) as $i => $dest): ?>
+      <a href="<?= SITE_URL ?>/destination/<?= e($dest['slug']) ?>"
+         class="mosaic-item <?= $i === 0 ? 'mosaic-item--large' : '' ?>"
+         aria-label="Explore <?= e($dest['name']) ?>">
+        <img src="<?= SITE_URL ?>/<?= e($dest['cover_image'] ?? 'assets/images/hero/sigiriya.jpg') ?>"
+             alt="<?= e($dest['name']) ?>, Sri Lanka"
+             loading="lazy">
+        <div class="mosaic-overlay">
+          <div class="mosaic-info">
+            <div class="mosaic-region"><?= e($dest['region'] ?? '') ?></div>
+            <div class="mosaic-name"><?= e($dest['name']) ?></div>
+            <span class="mosaic-cta">Explore →</span>
           </div>
         </div>
-        <?php endforeach; ?>
-      <?php endif; ?>
+      </a>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 
 
 <!-- ════════════════════════════════════════════════════════
- SECTION 6: EXPERIENCES
+ SECTION 6: EXPERIENCES (MAP CATEGORIES)
 ════════════════════════════════════════════════════════ -->
-<section class="experiences-section" aria-label="Sri Lanka Experiences">
-  <img src="<?= SITE_URL ?>/assets/images/hero/tea-train.jpg"
-       alt=""
-       class="experiences-bg"
-       aria-hidden="true"
-       loading="lazy">
-
-  <div class="container">
-    <div class="section-header section-header--center" data-aos="fade-up">
-      <span class="section-label" style="color:var(--gold-light)">How Will You Spend Your Days?</span>
-      <h2 class="section-title section-title--white">Extraordinary Experiences Await</h2>
-      <p class="section-sub section-sub--white">
-        From ancient temples to blue whale encounters — every day in Sri Lanka is an adventure
-      </p>
-    </div>
-
-    <?php
-    $experiences = [
-      ['icon' => '🏝️', 'name' => 'Beaches & Coastline',      'desc' => 'From turtle-nesting coves to surf breaks and whale-watching straits — Sri Lanka\'s 1,340km coastline never repeats itself.'],
-      ['icon' => '🏛️', 'name' => 'History & Culture',          'desc' => 'Walk among 2,500-year-old stupas, ancient royal palaces, and vibrant Buddhist monasteries still used today.'],
-      ['icon' => '🐆', 'name' => 'Wildlife & Safaris',         'desc' => 'Spot leopards at Yala, elephants at Udawalawe, and blue whales off Mirissa — all within one extraordinary island.'],
-      ['icon' => '🧗', 'name' => 'Adventure & Outdoors',       'desc' => 'Hike Adam\'s Peak at dawn, surf Arugam Bay, white-water raft the Kelani River, or zip-line over the rainforest.'],
-      ['icon' => '🍛', 'name' => 'Gastronomy & Food',          'desc' => 'Explore a cuisine shaped by three millennia of trade — fresh coconut, bold spices, and street food that tells Sri Lanka\'s story.'],
-      ['icon' => '🗺️', 'name' => 'Off The Beaten Path',       'desc' => 'Discover the quiet north, the wild east coast, and hidden jungle temples most tourists will never find.'],
-    ];
-    ?>
-
-    <div class="experiences-grid">
-      <?php foreach ($experiences as $i => $exp): ?>
-      <a href="<?= SITE_URL ?>/experiences"
-         class="experience-card"
-         data-aos="fade-up"
-         data-aos-delay="<?= $i * 70 ?>">
-        <div class="experience-icon"><?= $exp['icon'] ?></div>
-        <div class="experience-name"><?= e($exp['name']) ?></div>
-        <p class="experience-desc"><?= e($exp['desc']) ?></p>
+<section class="map-categories-section" aria-label="Our Vehicle Services">
+  <div class="mc-container">
+    
+    <!-- Left Column -->
+    <div class="mc-col mc-col-left" data-aos="fade-right">
+      
+      <!-- Category 1 -->
+      <a href="<?= SITE_URL ?>/services" class="mc-item">
+        <div class="mc-img-wrap">
+          <img src="<?= SITE_URL ?>/assets/images/luxury-car.jpg" alt="Airport Transfers" loading="lazy">
+        </div>
+        <div class="mc-text-box">
+          <h3 class="mc-title">Airport Transfers</h3>
+        </div>
       </a>
-      <?php endforeach; ?>
+
+      <!-- Category 2 -->
+      <a href="<?= SITE_URL ?>/services" class="mc-item">
+        <div class="mc-img-wrap">
+          <img src="<?= SITE_URL ?>/assets/images/nissan-vanette.jpg" alt="Multi-Day Chauffeur" loading="lazy">
+        </div>
+        <div class="mc-text-box">
+          <h3 class="mc-title">Multi-Day Chauffeur</h3>
+        </div>
+      </a>
+
+      <!-- Category 3 -->
+      <a href="<?= SITE_URL ?>/services" class="mc-item">
+        <div class="mc-img-wrap">
+          <img src="<?= SITE_URL ?>/assets/images/hero/tea-train.jpg" alt="Day Tours" loading="lazy">
+        </div>
+        <div class="mc-text-box">
+          <h3 class="mc-title">Day Tours</h3>
+        </div>
+      </a>
+
     </div>
 
-    <div class="text-center mt-md" data-aos="fade-up" data-aos-delay="450">
-      <a href="<?= SITE_URL ?>/experiences" class="btn btn-outline-white btn-lg">
-        Explore All Experiences
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+    <!-- Center Map -->
+    <div class="mc-map-wrap" data-aos="zoom-in">
+      <img src="<?= SITE_URL ?>/assets/images/srilanka_map.png" alt="Map of Sri Lanka with categories" loading="lazy">
+      
+      <!-- Package Locations Pins -->
+      <div class="map-pin pin-dot-left" style="top: 40%; left: 47%; animation-delay: 0.1s;"><span class="map-pin-dot"></span>Sigiriya</div>
+      <div class="map-pin pin-dot-left" style="top: 51%; left: 48%; animation-delay: 0.2s;"><span class="map-pin-dot"></span>Kandy</div>
+      <div class="map-pin pin-dot-right" style="top: 50%; left: 38%; animation-delay: 0.3s;"><span class="map-pin-dot"></span>Pinnawala</div>
+      <div class="map-pin pin-dot-left" style="top: 58%; left: 48%; animation-delay: 0.4s;"><span class="map-pin-dot"></span>Nuwara Eliya</div>
+      <div class="map-pin pin-dot-left" style="top: 63%; left: 53%; animation-delay: 0.5s;"><span class="map-pin-dot"></span>Ella</div>
+      <div class="map-pin pin-dot-left" style="top: 56%; left: 66%; animation-delay: 0.6s;"><span class="map-pin-dot"></span>Arugambay</div>
     </div>
+
+    <!-- Right Column -->
+    <div class="mc-col mc-col-right" data-aos="fade-left">
+      
+      <!-- Category 4 -->
+      <a href="<?= SITE_URL ?>/services" class="mc-item">
+        <div class="mc-text-box">
+          <h3 class="mc-title">Corporate Travel</h3>
+        </div>
+        <div class="mc-img-wrap">
+          <img src="<?= SITE_URL ?>/assets/images/luxury-car.jpg" alt="Corporate Travel" loading="lazy">
+        </div>
+      </a>
+
+      <!-- Category 5 -->
+      <a href="<?= SITE_URL ?>/fleet" class="mc-item">
+        <div class="mc-text-box">
+          <h3 class="mc-title">Luxury Fleet</h3>
+        </div>
+        <div class="mc-img-wrap">
+          <img src="<?= SITE_URL ?>/assets/images/nissan-vanette.jpg" alt="Luxury Fleet" loading="lazy">
+        </div>
+      </a>
+
+      <!-- Category 6 -->
+      <a href="<?= SITE_URL ?>/about" class="mc-item">
+        <div class="mc-text-box">
+          <h3 class="mc-title">Safe & Reliable</h3>
+        </div>
+        <div class="mc-img-wrap">
+          <img src="<?= SITE_URL ?>/assets/images/hero/beach.jpg" alt="Safe & Reliable" loading="lazy">
+        </div>
+      </a>
+
+    </div>
+
   </div>
 </section>
 

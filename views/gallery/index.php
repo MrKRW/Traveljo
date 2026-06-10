@@ -13,13 +13,15 @@
     <div class="container">
       <?php if (!empty($images)): ?>
         <div class="masonry-grid">
-          <?php foreach ($images as $image): ?>
-            <figure class="gallery-card">
-              <img
-                src="<?= SITE_URL . '/' . e(ltrim($image['image_path'], '/')) ?>"
-                alt="<?= e($image['title'] ?: 'Traveljo gallery image') ?>"
-                loading="lazy"
-              >
+          <?php foreach ($images as $index => $image): ?>
+            <figure class="gallery-card" data-aos="fade-up" data-aos-delay="<?= ($index % 3) * 100 ?>">
+              <div class="gallery-img-wrap">
+                <img
+                  src="<?= SITE_URL . '/' . e(ltrim($image['image_path'], '/')) ?>"
+                  alt="<?= e($image['title'] ?: 'Traveljo gallery image') ?>"
+                  loading="lazy"
+                >
+              </div>
               <?php if (!empty($image['title'])): ?>
                 <figcaption><?= e($image['title']) ?></figcaption>
               <?php endif; ?>

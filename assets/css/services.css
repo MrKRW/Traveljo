@@ -1,0 +1,195 @@
+/* ── SERVICES PAGE CSS ────────────────────────────────────── */
+
+.service-hero {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px; /* Offset for header */
+}
+
+.service-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.service-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.service-title {
+    color: var(--white);
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+.service-details-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.service-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Left Content */
+.service-info h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.service-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.check-icon {
+    color: var(--primary);
+}
+
+/* Right Content: Sticky Form */
+.service-booking-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.booking-card {
+    background: #fdfdfd;
+    padding: 3rem 2.5rem;
+    border-radius: 6px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+}
+
+.booking-card h3 {
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif; /* Elegant font */
+}
+
+.booking-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+.booking-form .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.booking-form .form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.booking-form .half {
+    flex: 1;
+}
+
+.booking-form label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.booking-form .form-control {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #0d6efd; /* Blue border */
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    background: #ffffff;
+    color: var(--dark);
+    transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+
+.booking-form .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.booking-form .form-control::placeholder {
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Custom Select styling for a premium feel (if added later) */
+.booking-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right center;
+    background-size: 16px;
+    padding-right: 2rem;
+}
+
+.booking-form textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .service-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-booking-sidebar {
+        position: static;
+    }
+}

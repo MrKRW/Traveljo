@@ -60,15 +60,13 @@
             <a href="<?= SITE_URL ?>/about" class="<?= is_active('/about') ?>">About Us</a>
           </li>
           <li class="has-dropdown">
-            <a href="<?= SITE_URL ?>/tours" class="<?= is_active('/tours') ?>">Tours</a>
+            <a href="<?= SITE_URL ?>/services" class="<?= is_active('/services') ?>">Services</a>
             <ul class="nav-dropdown">
-              <li><a href="<?= SITE_URL ?>/tours?category=authentic">Authentic Ceylon</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=adventure">Adventure</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=luxury">Luxury</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=wildlife">Wildlife</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=romantic">Romantic</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=wellness">Wellness</a></li>
-              <li><a href="<?= SITE_URL ?>/tours">All Tours &rarr;</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=airport">Airport Transfers</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=multiday">Multi-Day Private Driver</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=daytrip">Day Trips</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=corporate">Corporate Travel</a></li>
+              <li><a href="<?= SITE_URL ?>/fleet">Our Fleet</a></li>
             </ul>
           </li>
         </ul>
@@ -123,15 +121,13 @@
             <a href="<?= SITE_URL ?>/about" class="<?= is_active('/about') ?>">About Us</a>
           </li>
           <li class="has-dropdown">
-            <a href="<?= SITE_URL ?>/tours" class="<?= is_active('/tours') ?>">Tours</a>
+            <a href="<?= SITE_URL ?>/services" class="<?= is_active('/services') ?>">Services</a>
             <ul class="nav-dropdown">
-              <li><a href="<?= SITE_URL ?>/tours?category=authentic">Authentic Ceylon</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=adventure">Adventure</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=luxury">Luxury</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=wildlife">Wildlife</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=romantic">Romantic</a></li>
-              <li><a href="<?= SITE_URL ?>/tours?category=wellness">Wellness</a></li>
-              <li><a href="<?= SITE_URL ?>/tours">All Tours &rarr;</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=airport">Airport Transfers</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=multiday">Multi-Day Private Driver</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=daytrip">Day Trips</a></li>
+              <li><a href="<?= SITE_URL ?>/services?type=corporate">Corporate Travel</a></li>
+              <li><a href="<?= SITE_URL ?>/fleet">Our Fleet</a></li>
             </ul>
           </li>
           <li>
@@ -174,7 +170,7 @@
   <ul class="mobile-nav" role="list">
     <li><a href="<?= SITE_URL ?>/" class="<?= is_active('/') ?>">Home</a></li>
     <li><a href="<?= SITE_URL ?>/about" class="<?= is_active('/about') ?>">About Us</a></li>
-    <li><a href="<?= SITE_URL ?>/tours" class="<?= is_active('/tours') ?>">Tours</a></li>
+    <li><a href="<?= SITE_URL ?>/services" class="<?= is_active('/services') ?>">Services</a></li>
     <li><a href="<?= SITE_URL ?>/gallery" class="<?= is_active('/gallery') ?>">Gallery</a></li>
     <li><a href="<?= SITE_URL ?>/contact" class="<?= is_active('/contact') ?>">Contact Us</a></li>
   </ul>

@@ -1,0 +1,158 @@
+/* ============================================================
+   TRUSTED TOUR PACKAGES
+============================================================ */
+.trusted-packages-section {
+    padding: 6rem 0;
+    background-color: #eef1f3; /* Light grayish-blue background */
+    overflow: hidden;
+}
+
+.tp-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.tp-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #485c8a; /* Dark blue/navy from the image */
+    margin-bottom: 0.5rem;
+}
+
+.tp-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d16b35; /* Orange/Brown from the image */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tp-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tp-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.tp-item:nth-child(even) .tp-image-wrap {
+    transform: rotate(-3deg);
+}
+.tp-item:nth-child(odd) .tp-image-wrap {
+    transform: rotate(3deg);
+}
+
+.tp-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.tp-pkg-num {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #d16b35;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.tp-pkg-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tp-price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15); /* to make white visible on light bg */
+    white-space: nowrap;
+}
+
+.tp-name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #485c8a;
+    text-transform: uppercase;
+}
+
+.tp-features {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #d16b35;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.tp-image-wrap {
+    flex-shrink: 0;
+    width: 250px;
+    height: 180px;
+    background: #fff;
+    padding: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.tp-image-wrap:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    z-index: 10;
+}
+
+.tp-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Specific item tweaks to recreate the overlapping look */
+.tp-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.05), transparent);
+}
+
+@media (max-width: 768px) {
+    .tp-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .tp-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    .tp-pkg-header {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .tp-image-wrap {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+}

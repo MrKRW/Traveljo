@@ -10,11 +10,11 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 // --- Site ---
-define('SITE_NAME',  'Traveljo Ceylon Tours');
-define('SITE_TAGLINE', 'Discover the Pearl of the Indian Ocean');
+define('SITE_NAME',  'Traveljo Vehicle Tours');
+define('SITE_TAGLINE', 'Your Premium Private Ride in Sri Lanka');
 define('SITE_URL',   'http://localhost/Traveljo/Traveljo');
 define('SITE_EMAIL', 'info@traveljoceylontours.com');
-define('SITE_PHONE', '+94 77 123 4567');
+define('SITE_PHONE', '+94 77 212 1115');
 define('SITE_PHONE2', '+94 11 234 5678');
 define('SITE_ADDRESS', 'No. 45, Galle Road, Colombo 03, Sri Lanka');
 
