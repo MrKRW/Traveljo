@@ -67,9 +67,9 @@ $isHomePage  = true;
               Book a Transfer
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <button class="btn btn-outline-white btn-lg" onclick="openEnquiryModal()">
+            <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-outline-white btn-lg">
               Plan My Trip
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -94,9 +94,9 @@ $isHomePage  = true;
               Multi-Day Drivers
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <button class="btn btn-outline-white btn-lg" onclick="openEnquiryModal()">
+            <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-outline-white btn-lg">
               Enquire Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -121,9 +121,9 @@ $isHomePage  = true;
               View Our Fleet
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <button class="btn btn-outline-white btn-lg" onclick="openEnquiryModal()">
+            <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-outline-white btn-lg">
               Plan My Trip
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -139,6 +139,41 @@ $isHomePage  = true;
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
     <span>Scroll</span>
+  </div>
+
+  <!-- Quick Enquiry Widget -->
+  <div class="hero-widget" data-aos="fade-up" data-aos-delay="500">
+    <div class="hero-widget-inner">
+      <div class="hero-widget-header">
+        <h3>Where to?</h3>
+        <p>Start planning your custom Sri Lankan journey</p>
+      </div>
+      <form action="<?= SITE_URL ?>/plan-your-trip" method="GET" class="hero-widget-form">
+        <div class="widget-input-group">
+          <label>Destination</label>
+          <select name="dest" class="widget-control">
+            <option value="">Anywhere in Sri Lanka</option>
+            <option value="cultural">Cultural Triangle</option>
+            <option value="south">Southern Coast</option>
+            <option value="hill">Hill Country</option>
+            <option value="wildlife">Wildlife Parks</option>
+          </select>
+        </div>
+        <div class="widget-divider"></div>
+        <div class="widget-input-group">
+          <label>Duration</label>
+          <select name="days" class="widget-control">
+            <option value="">Any duration</option>
+            <option value="1-3">1 - 3 Days</option>
+            <option value="4-7">4 - 7 Days</option>
+            <option value="8+">8+ Days</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary widget-btn">
+          Start Planning
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -171,10 +206,6 @@ $isHomePage  = true;
         <!-- Stats row -->
         <div class="about-stats">
           <div class="about-stat">
-            <span class="about-stat-num">15+</span>
-            <span class="about-stat-label">Luxury Vehicles</span>
-          </div>
-          <div class="about-stat">
             <span class="about-stat-num">100%</span>
             <span class="about-stat-label">Safe Drives</span>
           </div>
@@ -190,13 +221,18 @@ $isHomePage  = true;
         </a>
       </div>
 
-      <!-- Portrait Image column -->
-      <div class="about-portrait-wrap" data-aos="fade-left" data-aos-delay="100">
-        <img src="<?= SITE_URL ?>/assets/images/happy-tourists.jpg"
-             alt="Happy tourists enjoying Sri Lanka"
-             class="about-portrait-img"
-             loading="lazy">
-        <div class="about-portrait-badge">
+      <!-- Boutique Image Grid column -->
+      <div class="about-image-grid" data-aos="fade-left" data-aos-delay="100">
+        <div class="about-img-1">
+          <img src="<?= SITE_URL ?>/assets/images/happy-tourists.jpg" alt="Happy tourists enjoying Sri Lanka" loading="lazy">
+        </div>
+        <div class="about-img-2">
+          <img src="<?= SITE_URL ?>/assets/images/nissan-vanette.jpg" alt="Luxury Travel Sri Lanka" loading="lazy">
+        </div>
+        <div class="about-signature">
+          Experience the Difference
+        </div>
+        <div class="about-portrait-badge" style="z-index: 10;">
           <span class="about-badge-num">3+</span>
           <span class="about-badge-text">Years of<br>Expertise</span>
         </div>
@@ -295,11 +331,12 @@ $isHomePage  = true;
     </div>
 
     <?php
-    $destList = !empty($destinations) ? $destinations : [
+    // Use 4 distinct destinations with different images for a better visual mosaic
+    $destList = [
+      ['name'=>'Ella', 'region'=>'Uva Province', 'slug'=>'ella', 'cover_image'=>'assets/images/hero/tea-train.jpg'],
       ['name'=>'Sigiriya', 'region'=>'Cultural Triangle', 'slug'=>'sigiriya', 'cover_image'=>'assets/images/hero/sigiriya.jpg'],
-      ['name'=>'Mirissa Beach', 'region'=>'Southern Coast', 'slug'=>'mirissa', 'cover_image'=>'assets/images/hero/beach.jpg'],
-      ['name'=>'Kandy', 'region'=>'Hill Country', 'slug'=>'kandy', 'cover_image'=>'assets/images/hero/tea-train.jpg'],
-      ['name'=>'Yala Safari', 'region'=>'Wildlife', 'slug'=>'yala', 'cover_image'=>'assets/images/hero/elephant.jpg'],
+      ['name'=>'Yala', 'region'=>'Southern Province', 'slug'=>'yala', 'cover_image'=>'assets/images/hero/elephant.jpg'],
+      ['name'=>'Mirissa', 'region'=>'Southern Coast', 'slug'=>'mirissa', 'cover_image'=>'assets/images/hero/beach.jpg'],
     ];
     ?>
     <div class="mosaic-grid" data-aos="fade-up">
@@ -447,9 +484,9 @@ $isHomePage  = true;
             From <strong><?= formatPrice((float)$offer['starting_from'], $offer['currency'] ?? 'USD') ?></strong> per person
           </div>
           <?php endif; ?>
-          <button class="btn btn-primary btn-sm" onclick="openEnquiryModal()">
+          <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-primary btn-sm">
             Enquire Now
-          </button>
+          </a>
           <?php if ($offer['valid_until']): ?>
           <div class="offer-expires">
             Offer valid until <?= date('j M Y', strtotime($offer['valid_until'])) ?>
@@ -471,53 +508,6 @@ $isHomePage  = true;
 </section>
 
 
-<!-- ════════════════════════════════════════════════════════
- SECTION 8: TESTIMONIALS (from DB)
-════════════════════════════════════════════════════════ -->
-<section class="testimonials-section" aria-label="Guest Testimonials">
-  <div class="container">
-    <div class="section-header section-header--center" data-aos="fade-up">
-      <span class="section-label">What Our Guests Say</span>
-      <h2 class="section-title">Stories From Happy Travellers</h2>
-      <p class="section-sub">
-        Real experiences from guests who discovered Sri Lanka with Traveljo
-      </p>
-    </div>
-
-    <?php if (!empty($testimonials)): ?>
-    <div class="swiper testimonials-swiper">
-      <div class="swiper-wrapper">
-        <?php foreach ($testimonials as $testimonial): ?>
-        <div class="swiper-slide" style="height:auto">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <p class="testimonial-text"><?= e($testimonial['message']) ?></p>
-            <div class="testimonial-meta">
-              <div class="testimonial-avatar">
-                <?= mb_strtoupper(mb_substr($testimonial['guest_name'] ?? 'G', 0, 1)) ?>
-              </div>
-              <div>
-                <div class="testimonial-name"><?= e($testimonial['guest_name']) ?></div>
-                <div class="testimonial-country">
-                  <?= e($testimonial['country']) ?>
-                </div>
-                <?php if ($testimonial['tour_title']): ?>
-                <div class="testimonial-tour">
-                  <?= e($testimonial['tour_title']) ?>
-                </div>
-                <?php endif; ?>
-                <div style="margin-top:0.3rem"><?= starRating((int)$testimonial['rating']) ?></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <?php endforeach; ?>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <?php endif; ?>
-  </div>
-</section>
 
 
 <!-- ════════════════════════════════════════════════════════
@@ -681,9 +671,7 @@ $isHomePage  = true;
     "closes": "18:00"
   },
   "sameAs": [
-    "<?= SOCIAL_FB ?>",
-    "<?= SOCIAL_IG ?>",
-    "<?= SOCIAL_TW ?>"
+    "<?= SOCIAL_FB ?>"
   ]
 }
 </script>

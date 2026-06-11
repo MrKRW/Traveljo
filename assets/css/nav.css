@@ -75,11 +75,12 @@
 
 .site-header.scrolled {
   position: fixed;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
-  animation: slideDown 0.3s ease-out forwards;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
 @keyframes slideDown {
@@ -174,16 +175,20 @@
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
-  min-width: 220px;
-  background: var(--white);
+  min-width: 240px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
-  padding: 0.5rem;
+  box-shadow: var(--shadow-xl);
+  padding: 0.75rem;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-8px);
-  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+  transform: translateY(-12px);
+  transition: opacity var(--t-base) var(--ease), transform var(--t-base) var(--ease);
   border-top: 3px solid var(--gold);
+  border-left: 1px solid rgba(255,255,255,0.6);
+  border-right: 1px solid rgba(255,255,255,0.6);
 }
 
 .nav-links > li.has-dropdown:hover .nav-dropdown {
@@ -194,17 +199,18 @@
 
 .nav-dropdown a {
   display: block;
-  padding: 0.6rem 1rem;
-  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text);
   border-radius: var(--radius-sm);
-  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+  transition: all var(--t-fast) var(--ease);
 }
 
 .nav-dropdown a:hover {
   background: var(--gold-pale);
   color: var(--gold);
+  padding-left: 1.25rem;
 }
 
 /* ── NAV CTA ─────────────────────────────────────────────── */
@@ -486,11 +492,12 @@
 
 /* ── SCROLLED STATE: frosted glass slides in ───────────── */
 .site-header.scrolled.has-split-nav {
-  background: rgba(255,255,255,0.97) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 2px 28px rgba(0,0,0,0.10) !important;
-  animation: slideDown 0.35s cubic-bezier(0.16,1,0.3,1) forwards;
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.06) !important;
+  animation: slideDown 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
 .site-header.scrolled.has-split-nav .nav-inner--split {

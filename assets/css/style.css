@@ -8,27 +8,27 @@
 /* ── DESIGN TOKENS ──────────────────────────────────────── */
 :root {
   /* Brand Colors */
-  --gold:        #C9A84C;
-  --gold-dark:   #a8873b;
-  --gold-light:  #e8cc7a;
-  --gold-pale:   rgba(201,168,76,0.12);
-  --green:       #2D6A4F;
-  --green-dark:  #1f4d39;
-  --green-light: #40916c;
-  --dark:        #1A1A2E;
-  --dark-2:      #16213E;
-  --cream:       #F8F5EE;
-  --cream-dark:  #EDE8DD;
-  --text:        #2C2C2A;
-  --muted:       #6B6B60;
-  --border:      rgba(0,0,0,0.09);
+  --gold:        #D4AF37;
+  --gold-dark:   #B5952F;
+  --gold-light:  #F2DB83;
+  --gold-pale:   rgba(212,175,55,0.12);
+  --green:       #1E4633;
+  --green-dark:  #143023;
+  --green-light: #2A6348;
+  --dark:        #0B0F19;
+  --dark-2:      #121826;
+  --cream:       #FBF9F6;
+  --cream-dark:  #F0EBE1;
+  --text:        #2C303A;
+  --muted:       #717786;
+  --border:      rgba(0,0,0,0.06);
   --white:       #ffffff;
 
   /* Shadows */
-  --shadow-sm:   0 2px 12px rgba(0,0,0,0.06);
-  --shadow-md:   0 4px 24px rgba(0,0,0,0.10);
-  --shadow-lg:   0 8px 40px rgba(0,0,0,0.15);
-  --shadow-gold: 0 4px 20px rgba(201,168,76,0.25);
+  --shadow-sm:   0 4px 16px rgba(0,0,0,0.04);
+  --shadow-md:   0 8px 32px rgba(0,0,0,0.06);
+  --shadow-lg:   0 16px 48px rgba(0,0,0,0.08);
+  --shadow-gold: 0 8px 32px rgba(212,175,55,0.25);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -230,15 +230,35 @@ section.section--green {
 }
 
 .btn-primary {
-  background: var(--gold);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
   color: var(--white);
   box-shadow: var(--shadow-gold);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  z-index: -1;
+  transition: all 0.6s var(--ease);
 }
 
 .btn-primary:hover {
-  background: var(--gold-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(201,168,76,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212,175,55,0.35);
+}
+
+.btn-primary:hover::after {
+  left: 150%;
 }
 
 .btn-outline {

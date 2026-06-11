@@ -18,17 +18,8 @@
           <a href="<?= SOCIAL_FB ?>" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <a href="<?= SOCIAL_IG ?>" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="<?= SOCIAL_TW ?>" target="_blank" rel="noopener" aria-label="Twitter" class="footer-social-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0022.43.36a9 9 0 01-2.88 1.1 4.52 4.52 0 00-7.69 4.11A12.82 12.82 0 011.64 1s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-          </a>
-          <a href="<?= SOCIAL_YT ?>" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.95C18.88 4 12 4 12 4s-6.88 0-8.6.47A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.53C5.12 20 12 20 12 20s6.88 0 8.6-.47a2.78 2.78 0 001.94-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-          </a>
-          <a href="<?= SOCIAL_LI ?>" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="<?= SOCIAL_WA ?>" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           </a>
         </div>
       </div>
@@ -103,54 +94,6 @@
 </footer>
 
 
-
-<!-- ══ ENQUIRY MODAL ═════════════════════════════════════════ -->
-<div class="modal-overlay" id="enquiry-modal-overlay">
-  <div class="modal-content" role="dialog" aria-labelledby="modal-title" aria-modal="true">
-    <button class="modal-close" onclick="closeEnquiryModal()" aria-label="Close modal">×</button>
-    <div class="modal-header">
-      <h3 id="modal-title">Plan Your Sri Lanka Trip</h3>
-      <p>Fill out the form below and our travel experts will get back to you within 24 hours with a custom itinerary and quote.</p>
-    </div>
-    <form id="enquiry-form" class="modal-form">
-      <?= function_exists('csrf_field') ? csrf_field() : '' ?>
-      <input type="hidden" id="modal-tour-id" name="tour_id" value="">
-      
-      <div class="form-group">
-        <label for="enq-name" class="form-label">Full Name *</label>
-        <input type="text" id="enq-name" name="name" class="form-control" required placeholder="Jane Smith">
-      </div>
-      
-      <div class="form-group">
-        <label for="enq-email" class="form-label">Email Address *</label>
-        <input type="email" id="enq-email" name="email" class="form-control" required placeholder="your@email.com">
-      </div>
-      
-      <div class="form-group">
-        <label for="enq-phone" class="form-label">WhatsApp / Phone Number</label>
-        <input type="tel" id="enq-phone" name="phone" class="form-control" placeholder="+1 234 567 8900">
-      </div>
-      
-      <div class="form-group">
-        <label for="enq-dates" class="form-label">Expected Travel Dates</label>
-        <input type="text" id="enq-dates" name="dates" class="form-control" placeholder="e.g. Mid December 2026 for 10 days">
-      </div>
-      
-      <div class="form-group">
-        <label for="enq-message" class="form-label">Your Travel Ideas / Requirements</label>
-        <textarea id="enq-message" name="message" class="form-control" rows="4" placeholder="Tell us about the places you'd like to visit, your budget, number of travelers, etc."></textarea>
-      </div>
-      
-      <button type="submit" id="enq-submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; justify-content: center;">
-        <span id="enq-btn-text">Send My Enquiry</span>
-        <svg id="enq-spinner" style="display:none; width: 18px; height: 18px; animation: spin 1s linear infinite; margin-left: 8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
-          <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path>
-        </svg>
-      </button>
-    </form>
-  </div>
-</div>
 
 <!-- ══ TOAST ═════════════════════════════════════════════════ -->
 <div class="toast" id="toast" role="alert" aria-live="polite"></div>

@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (data.success) {
         showToast('✅ ' + data.message, 'success');
-        closeEnquiryModal();
         form.reset();
       } else {
         showToast('❌ ' + (data.message || 'Something went wrong. Please try again.'), 'error');

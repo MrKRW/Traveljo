@@ -33,10 +33,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
   <!-- Site CSS -->
-  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/style.css?v=1.3">
-  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/nav.css?v=1.5">
+  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/style.css?v=1.5">
+  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/nav.css?v=1.7">
   <?php if (isset($extraCss)): foreach ($extraCss as $css): ?>
-  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/<?= e($css) ?>?v=1.4">
+  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/<?= e($css) ?>?v=1.6">
   <?php endforeach; endif; ?>
 </head>
 <body>
@@ -87,9 +87,9 @@
             <a href="<?= SITE_URL ?>/contact" class="<?= is_active('/contact') ?>">Contact Us</a>
           </li>
           <li class="nav-cta-item">
-            <button class="btn btn-primary btn-sm" id="enquiry-fab-btn" onclick="openEnquiryModal()">
+            <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-primary btn-sm" id="enquiry-fab-btn">
               Plan My Trip
-            </button>
+            </a>
           </li>
         </ul>
 
@@ -141,9 +141,9 @@
         <!-- CTA + Hamburger -->
         <div class="nav-actions" style="display:flex;align-items:center;gap:1rem;">
           <div class="nav-cta">
-            <button class="btn btn-primary btn-sm" id="enquiry-fab-btn" onclick="openEnquiryModal()">
+            <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-primary btn-sm" id="enquiry-fab-btn">
               Plan My Trip
-            </button>
+            </a>
           </div>
 
           <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -176,9 +176,9 @@
   </ul>
 
   <div class="mobile-menu-footer">
-    <button class="btn btn-primary" onclick="openEnquiryModal(); closeMobileMenu()">
+    <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-primary" onclick="closeMobileMenu()">
       Plan My Trip
-    </button>
+    </a>
     <div class="mobile-contact">
       <a href="tel:<?= e(SITE_PHONE) ?>"><?= e(SITE_PHONE) ?></a>
       <a href="mailto:<?= e(SITE_EMAIL) ?>"><?= e(SITE_EMAIL) ?></a>

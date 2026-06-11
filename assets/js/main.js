@@ -121,24 +121,13 @@ document.addEventListener('keydown', (e) => {
 const modalOverlay = $('#enquiry-modal-overlay');
 
 function openEnquiryModal(tourId = '') {
-  if (tourId) {
-    const tourInput = $('#modal-tour-id');
-    if (tourInput) tourInput.value = tourId;
-  }
-  modalOverlay?.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  setTimeout(() => $('#enq-name')?.focus(), 300);
+  let url = getBasePath() + '/plan-your-trip';
+  if (tourId) url += '?tour_id=' + tourId;
+  window.location.href = url;
 }
 
-function closeEnquiryModal() {
-  modalOverlay?.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// Close on backdrop click
-modalOverlay?.addEventListener('click', (e) => {
-  if (e.target === modalOverlay) closeEnquiryModal();
-});
+// Keep closeEnquiryModal for backwards compatibility just in case
+function closeEnquiryModal() {}
 
 // Make globally accessible
 window.openEnquiryModal  = openEnquiryModal;

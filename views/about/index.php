@@ -288,10 +288,10 @@
         our travel experts are ready to craft your perfect journey within 24 hours.
       </p>
       <div class="about-cta-actions">
-        <button class="btn btn-primary btn-lg" onclick="openEnquiryModal()">
+        <a href="<?= SITE_URL ?>/plan-your-trip" class="btn btn-primary btn-lg">
           Plan My Trip
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
+        </a>
         <a href="<?= SITE_URL ?>/contact" class="btn btn-outline-white btn-lg">
           Contact Us
         </a>
@@ -322,9 +322,7 @@
     "addressCountry": "LK"
   },
   "sameAs": [
-    "<?= SOCIAL_FB ?>",
-    "<?= SOCIAL_IG ?>",
-    "<?= SOCIAL_TW ?>"
+    "<?= SOCIAL_FB ?>"
   ]
 }
 </script>
