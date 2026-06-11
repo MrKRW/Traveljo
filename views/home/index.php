@@ -160,7 +160,7 @@ $isHomePage  = true;
         <p class="about-desc">
           Founded with a passion for providing the most comfortable way to see our island home,
           Traveljo Vehicle Tours has been offering top-tier private driver services for over
-          two decades. From smooth airport transfers to multi-day cross-country journeys, we ensure
+          3 years. From smooth airport transfers to multi-day cross-country journeys, we ensure
           your ride is safe, relaxing, and tailored to you.
         </p>
         <p class="about-desc" style="margin-top:-0.75rem">
@@ -197,7 +197,7 @@ $isHomePage  = true;
              class="about-portrait-img"
              loading="lazy">
         <div class="about-portrait-badge">
-          <span class="about-badge-num">20+</span>
+          <span class="about-badge-num">3+</span>
           <span class="about-badge-text">Years of<br>Expertise</span>
         </div>
       </div>

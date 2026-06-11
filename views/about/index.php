@@ -39,7 +39,7 @@
              class="about-img-accent"
              loading="lazy">
         <div class="about-badge">
-          <span class="about-badge-num">20+</span>
+          <span class="about-badge-num">3+</span>
           <span class="about-badge-text">Years of<br>Expertise</span>
         </div>
       </div>
@@ -49,7 +49,7 @@
         <h2 class="section-title">Born From a Love<br>of Our Island Home</h2>
         <div class="divider"></div>
         <p class="about-desc">
-          Traveljo Ceylon Tours was founded in 2005 by a team of passionate Sri Lankan
+          Traveljo Ceylon Tours was founded in 2023 by a team of passionate Sri Lankan
           travel professionals who believed that the best way to experience our island
           is through the eyes of those who know it intimately. What began as a small
           family operation in Colombo has grown into one of Sri Lanka's most trusted
@@ -80,7 +80,7 @@
   <div class="container">
     <div class="about-stats-grid">
       <div class="about-stat" data-aos="fade-up">
-        <span class="about-stat-num">20+</span>
+        <span class="about-stat-num">3+</span>
         <span class="about-stat-label">Years of Experience</span>
       </div>
       <div class="about-stat" data-aos="fade-up" data-aos-delay="80">
@@ -197,12 +197,12 @@
   <div class="container">
     <div class="section-header section-header--center" data-aos="fade-up">
       <span class="section-label">Our Journey</span>
-      <h2 class="section-title">Two Decades of<br>Creating Memories</h2>
+      <h2 class="section-title">Years of<br>Creating Memories</h2>
     </div>
 
     <div class="timeline">
       <div class="timeline-item" data-aos="fade-up">
-        <span class="timeline-year">2005</span>
+        <span class="timeline-year">2023</span>
         <div class="timeline-content">
           <h3>The Beginning</h3>
           <p>Traveljo Ceylon Tours is founded in Colombo with a single vehicle and a passion for sharing Sri Lanka's hidden gems with the world.</p>
@@ -308,11 +308,11 @@
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   "name": "<?= SITE_NAME ?>",
-  "description": "Family-owned Sri Lanka tour operator with 20+ years of expertise crafting personalised cultural, wildlife, and luxury travel experiences.",
+  "description": "Family-owned Sri Lanka tour operator with 3+ years of expertise crafting personalised cultural, wildlife, and luxury travel experiences.",
   "url": "<?= SITE_URL ?>/about",
   "telephone": "<?= SITE_PHONE ?>",
   "email": "<?= SITE_EMAIL ?>",
-  "foundingDate": "2005",
+  "foundingDate": "2023",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "No. 45, Galle Road",
