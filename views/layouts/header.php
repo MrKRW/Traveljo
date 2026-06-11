@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/style.css?v=1.5">
   <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/nav.css?v=1.7">
   <?php if (isset($extraCss)): foreach ($extraCss as $css): ?>
-  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/<?= e($css) ?>?v=1.6">
+  <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/<?= e($css) ?>?v=1.8">
   <?php endforeach; endif; ?>
 </head>
 <body>

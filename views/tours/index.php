@@ -68,13 +68,7 @@
                 <p class="card-excerpt"><?= e(excerpt((string)($tour['tagline'] ?: $tour['description'] ?: ''), 20)) ?></p>
 
                 <div class="card-footer">
-                  <div>
-                    <span class="card-price-label">From</span>
-                    <span class="card-price">
-                      <?= !empty($tour['price_usd']) ? formatPrice((float)$tour['price_usd']) : 'Contact Us' ?>
-                    </span>
-                  </div>
-                  <a href="<?= SITE_URL ?>/tour/<?= e((string)$tour['slug']) ?>" class="btn btn-primary btn-sm">View Tour</a>
+                  <a href="<?= SITE_URL ?>/tour/<?= e((string)$tour['slug']) ?>" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">View Tour</a>
                 </div>
               </div>
             </article>

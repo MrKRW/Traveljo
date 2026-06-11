@@ -9,7 +9,7 @@ $extraCss = ['services.css'];
 <section class="service-hero" style="background-image: url('<?= SITE_URL ?>/<?= e($service['image']) ?>');">
     <div class="service-hero-overlay"></div>
     <div class="container service-hero-content">
-        <h1 class="service-title"><?= e($service['title']) ?></h1>
+        <h1 class="service-title" data-aos="fade-up"><?= e($service['title']) ?></h1>
     </div>
 </section>
 
@@ -19,15 +19,15 @@ $extraCss = ['services.css'];
         <div class="service-layout">
             
             <!-- Left: Description & Features -->
-            <div class="service-info">
+            <div class="service-info" data-aos="fade-right">
                 <h2>Overview</h2>
                 <p class="service-desc"><?= nl2br(e($service['description'])) ?></p>
                 
                 <h3 class="mt-4">What's Included</h3>
                 <ul class="service-features-list">
-                    <?php foreach ($service['features'] as $feature): ?>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" class="check-icon">
+                    <?php foreach ($service['features'] as $i => $feature): ?>
+                        <li data-aos="fade-up" data-aos-delay="<?= $i * 100 ?>">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22" class="check-icon">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                             <?= e($feature) ?>
@@ -37,7 +37,7 @@ $extraCss = ['services.css'];
             </div>
 
             <!-- Right: Booking Form (Sticky) -->
-            <div class="service-booking-sidebar">
+            <div class="service-booking-sidebar" data-aos="fade-left" data-aos-delay="200">
                 <div class="booking-card">
                     <h3>Book This Service</h3>
                     <p>Fill out the form below to request a quote or reserve your vehicle.</p>
@@ -77,7 +77,7 @@ $extraCss = ['services.css'];
                             <textarea id="details" name="details" rows="4" class="form-control" placeholder="Flight number, hotel name, luggage details, etc."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-block">Submit Booking Request</button>
+                        <button type="submit" class="btn-block">Submit Request</button>
                     </form>
                 </div>
             </div>

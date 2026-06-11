@@ -47,7 +47,6 @@
             <div class="tour-facts">
               <p><strong>Duration:</strong> <?= e((string)$tour['duration_days']) ?> days</p>
               <p><strong>Category:</strong> <?= e(ucfirst((string)$tour['category'])) ?></p>
-              <p><strong>Price:</strong> <?= !empty($tour['price_usd']) ? formatPrice((float)$tour['price_usd']) : 'Contact us' ?></p>
             </div>
             <a href="<?= SITE_URL ?>/plan-your-trip?tour_id=<?= (int)$tour['id'] ?>" class="btn btn-primary" style="width: 100%; justify-content: center;">Plan This Tour</a>
           </div>
